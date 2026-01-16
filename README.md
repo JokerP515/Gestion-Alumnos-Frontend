@@ -176,22 +176,3 @@ frontend/
 ├── vite.config.js          # Configuración Vite
 └── package.json            # Dependencia Scripts Disponibles
 ```
-
-### Docker Compose (Opcional)
-
-Para ejecutar frontend y backend juntos, cree un `compose.yml`:
-
-```yaml
-services:
-  frontend:
-    build: .
-    ports:
-      - "80:80"
-    depends_on:
-      - backend
-  
-  backend:
-    image: gestion-alumnos-backend
-    ports:
-      - "8080:8080"
-```
