@@ -46,10 +46,13 @@ La aplicación estará disponible en: `http://localhost:3000`
 ### Opción 2: Ejecutar con Docker
 
 ```bash
-# 1. Construir la imagen Docker
+# 1. Configurar variables de entorno (opcional pero recomendado)
+copy .env.example .env
+
+# 2. Construir la imagen Docker
 docker build -t gestion-alumnos-frontend .
 
-# 2. Ejecutar el contenedor (primera vez)
+# 3. Ejecutar el contenedor (primera vez)
 docker run -d -p 80:80 --name frontend gestion-alumnos-frontend
 
 # Para ejecuciones posteriores (cuando el contenedor ya existe):
@@ -58,6 +61,8 @@ docker start frontend
 # Para detener el contenedor:
 docker stop frontend
 ```
+
+> **Nota**: El paso 1 es opcional porque el código tiene configurado `http://localhost:8080/api` como URL por defecto. Solo es necesario si desea usar una URL diferente para el backend.
 
 La aplicación estará disponible en: `http://localhost`
 
