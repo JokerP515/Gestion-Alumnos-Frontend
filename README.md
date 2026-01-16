@@ -154,7 +154,6 @@ El [Dockerfile](Dockerfile) incluye:
 ```
 frontend/
 ├── src/
-│   ├── components/         # Componentes reutilizable (futuro)
 │   ├── pages/              # Páginas principales
 │   │   ├── Alumnos.jsx     # Gestión de alumnos
 │   │   ├── Materias.jsx    # Gestión de materias
@@ -168,7 +167,6 @@ frontend/
 │   ├── App.css             # Estilos del layout
 │   ├── main.jsx            # Punto de entrada
 │   └── index.css           # Estilos globales
-├── public/                 # Archivos estáticos
 ├── .env                    # Variables de entorno
 ├── .env.example            # Ejemplo de variables
 ├── Dockerfile              # Configuración Docker
